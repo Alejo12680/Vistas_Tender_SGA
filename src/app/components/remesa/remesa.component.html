@@ -4,32 +4,8 @@
             <li>
                 <h2>Remesa:</h2>
             </li>
-            <li>
-                <h4>0</h4>
-            </li>
-            <li>
-                <h4>0</h4>
-            </li>
-            <li>
-                <h4>0</h4>
-            </li>
-            <li>
-                <h4>0</h4>
-            </li>
-            <li>
-                <h4>0</h4>
-            </li>
-            <li>
-                <h4>0</h4>
-            </li>
-            <li>
-                <h4>0</h4>
-            </li>
-            <li>
-                <h4>0</h4>
-            </li>
-            <li>
-                <h4>7</h4>
+            <li *ngFor="let numConsulta of valorConsulta">
+                <h4>{{numConsulta}} </h4>
             </li>
         </ul>
     </section>
@@ -38,26 +14,26 @@
         <div class="col-4">
             <div class="row">
                 <p class="m-0">
-                    <strong class="fw-bold tamaño_text">Remitente:</strong> KOPPS COMMERCIAL S.A.S-KOPPS COMMERCIAL S.A.S-N. D
+                    <strong class="fw-bold tamaño_text">Remitente:</strong> {{remitente.remitente}}
                 </p>
                 <p class="m-0">
-                    <strong class="fw-bold tamaño_text">Cantidad:</strong> 10
+                    <strong class="fw-bold tamaño_text">Cantidad:</strong> {{remitente.cantidad}}
                 </p>
                 <p class="m-0">
-                    <strong class="fw-bold tamaño_text">Origen:</strong> Cúcuta, Norte de Santander
+                    <strong class="fw-bold tamaño_text">Origen:</strong> {{remitente.origen}}
                 </p>
                 <hr class="mt-2 linea_punteada" />
             </div>
 
             <div class="row">
                 <p class="m-0">
-                    <strong class="fw-bold tamaño_text">Destinatario:</strong> KOPPS COMMERCIAL S.A.S-KOPPS COMMERCIAL S.A.S-N. D
+                    <strong class="fw-bold tamaño_text">Destinatario:</strong> {{destinatario.destinatario}}
                 </p>
                 <p class="m-0">
-                    <strong class="fw-bold tamaño_text">Direccion:</strong> 
+                    <strong class="fw-bold tamaño_text">Direccion:</strong> {{destinatario.direccion}}
                 </p>
                 <p class="m-0">
-                    <strong class="fw-bold tamaño_text">Destino:</strong> Cúcuta, Norte de Santander
+                    <strong class="fw-bold tamaño_text">Destino:</strong> {{destinatario.destino}}
                 </p>
             </div>
         </div>
@@ -153,34 +129,15 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td><strong>44-2211400790</strong></td>
-                    <td>CO-Ge CUCTA</td>
-                    <td>900224720</td>
-                    <td>Comserloc</td>
-                    <td>Calle 3 # 7 - 45</td>
-                    <td>Cúcuta</td>
-                    <td>Recogido</td>
-                    <td>2023-11-14 17:01:03</td>
-                    <td class="text-center">
-                        <a href="https://oet-avansat7.intrared.net:8083//ap/sate_zonlog/gesdoc/2023/11/2/20231116084825f4d4306a.png"
-                            target="_blank">
-                            <button type="submit" class="btn">
-                                <img src="../../../assets/hoja.png" class="me-4" width="25" />Ver
-                            </button>
-                        </a>
-                    </td>
-                </tr>
-                <!-- ******************************** automatico **********************************-->
-                <tr>
-                    <td><strong>44-2211400789</strong></td>
-                    <td>CO-Ge CUCTA</td>
-                    <td>900224720</td>
-                    <td>Comserloc</td>
-                    <td>Calle 3 # 7 - 45</td>
-                    <td>Cúcuta</td>
-                    <td>Recogido</td>
-                    <td>2023-11-14 16:15:21</td>
+                <tr *ngFor="let datos of datosTable">
+                    <td><strong>{{datos.guia}} </strong></td>
+                    <td>{{datos.factura}} </td>
+                    <td>{{datos.cod_destinatario}} </td>
+                    <td>{{datos.destinatario}} </td>
+                    <td>{{datos.direccion}} </td>
+                    <td>{{datos.ciudad}} </td>
+                    <td>{{datos.estado}} </td>
+                    <td>{{datos.fechaOperacion}} </td>
                     <td class="text-center">
                         <a href="https://oet-avansat7.intrared.net:8083//ap/sate_zonlog/gesdoc/2023/11/2/20231116084825f4d4306a.png"
                             target="_blank">

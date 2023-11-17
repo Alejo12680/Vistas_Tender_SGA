@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { ServiciosService } from 'src/app/service/servicios.service';
 
 @Component({
   selector: 'app-consulta',
@@ -16,10 +17,11 @@ export class ConsultaComponent {
   public loading: boolean = false;
   public consultas: string[] = ['Remesa', 'Guia', 'FA - Numero Factura Cliente', 'RE - Numero Remision Cliente'];
 
-  constructor (
+  constructor(
     private formBuilder: FormBuilder,
     private router: Router,
     private toastr: ToastrService,
+    private miServicio: ServiciosService,
   ) { }
 
   ngOnInit(): void {
@@ -41,6 +43,10 @@ export class ConsultaComponent {
 
       console.log(estructura);
 
+      // Servicio BehaviorSubject
+      let numeroConsulta = this.formCreateConsulta.value.numero_consulta.toUpperCase();
+      this.miServicio.actualizarValorConsulta(numeroConsulta);
+
       // validacion de la consulta
       const consultaSeleccionada = this.formCreateConsulta.value.consulta;
 
@@ -58,7 +64,7 @@ export class ConsultaComponent {
 
       this.formCreateConsulta.reset();
       // this.loading = true;
-      
+
     } else {
 
       this.formCreateConsulta.markAllAsTouched();
@@ -66,12 +72,5 @@ export class ConsultaComponent {
     }
   }
 
-  enviarNumeroConsulta() {
-
-    let numeroConsulta = this.formCreateConsulta.value.numero_consulta;
-
-
-    
-  }
 
 }
