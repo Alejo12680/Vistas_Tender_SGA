@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+//Impoorta el Toastr para los mensajes
+@import 'ngx-toastr/toastr';
+
+hr {
+    opacity: 1;
+}
+
+.inputMayuscula {
+    text-transform: uppercase;
+}

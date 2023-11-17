@@ -1,0 +1,106 @@
+<!-- Comando de boostrapt 4 para que funcione el stylo del codigo, Global esta el comando de Boostrapt 5 -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+<!-- *************************************************************************************************** -->
+
+<div class="container mt-4">
+    <div class="row" style="margin-bottom: 30px">
+      <ul>
+        <li class="guia"> <h2><em style="font-weight: bold;">Guia/ Remesa:</em></h2></li>
+        <li *ngFor="let cero of ceros" class="ceros">{{ cero }}</li>
+      </ul>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <ul class="variables" style="margin-bottom: -25px">
+          <li><em style="font-weight: bold;" >Remitente</em>: {{nombreRemitente}}</li>
+          <li><em style="font-weight: bold;">cantidad</em>: {{cantidad}}</li>
+          <li><em style="font-weight: bold;">Origen</em>: {{origen}}</li>
+        </ul>
+        <p style="font-size: 40px; margin-top: 0px; letter-spacing: 2px" class="puntos">
+          ............................
+        </p>
+      </div>
+      <div class="col-8" >
+        <ul class="float-sm-left" *ngFor="let step of steps; let i = index" (mouseover)="actualizarProgreso(step.id)">
+          <li>{{ step.date }}</li>
+          <li style="text-align: center;">{{ step.time }}</li>
+          <li style="text-align: center">
+            <img [src]="step.src" [alt]="step.alt" style="width: 50px" />
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-4">
+        <ul class="variablesDest">
+          <li style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><em style="font-weight: 700; font-family: Verdana, Geneva, Tahoma, sans-serif;">Destinatario</em>:  {{nombreRemitente}}</li>
+          <li><em style="font-weight: bold;">Dirección</em>: {{cantidad}}</li>
+          <li><em style="font-weight: bold;">Destino</em>: {{destino}}</li>
+        </ul>
+      </div>
+
+      <div class="col-8">
+        <ul class="variables" style="margin-bottom: -25px; margin-top: -130px; margin-left: 40px">
+          <li *ngIf="progresoActual > 0">
+
+            <div class="progress" style="width: 570px; height: 3px; ">
+              <div
+              class="progress-bar"
+              role="progressbar"
+              [style.width.%]="progresoActual"
+              [attr.aria-valuenow]="progresoActual"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              style="background-color: #ff9900"
+
+              >
+
+              </div>
+              <div class="circulo-progreso" [style.left.px]="posicionHorizontalCirculo"></div>
+              <div class="circulo-progreso" [style.left.px]="progreso"></div>
+              <div class="circulo-progreso" [style.left.px]="progreso1"></div>
+              <div class="circulo-progreso" [style.left.px]="progreso2"></div>
+              <div class="circulo-progreso" [style.left.px]="progreso3"></div>
+              <div class="circulo-progreso" [style.left.px]="progreso4"></div>
+              <div class="circulo-progreso" [style.left.px]="progreso5"></div>
+
+            </div>
+          </li>
+
+        </ul>
+        <div>
+          <ul style="float: left;">
+            <li style="margin-top: 35px; margin-left: 10px;">Recogida</li>
+          </ul>
+          <ul style="float: left;">
+            <li style="margin-top: 35px; margin-left: -10px; font-weight: bold;">En bodega Origen</li>
+            <li style="margin-left: -10px;">{{plataforma}}</li>
+          </ul>
+          <ul style="float: left;">
+            <li style="margin-top: 35px; margin-left: -20px; font-weight: bold;">En Tránsito</li>
+          </ul>
+          <ul style="float: left;">
+            <li style="margin-top: 35px; margin-left: -5px; font-weight: bold;">En bodega</li>
+            <li style="margin-left: -20px;">{{plataforma}}</li>
+          </ul>
+          <ul style="float: left;">
+            <li style="margin-top: 35px; margin-left: -20px; font-weight: bold;">En reparto</li>
+          </ul>
+          <ul style="float: left;">
+            <li style="margin-top: 35px; margin-left: 5px; font-weight: bold;">Entregado</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+          <div style="border: 1px solid #b9d2fb; border-radius: 10px; background-color: #efefef; margin-top: -30px; width: 320px;">
+            <p style="padding-top: 10px; padding-left: 20px;"><em>Estado: {{estado}}</em></p>
+          </div>
+
+      </div>
+      <div class="col-9" style=" margin-top: -140px; padding-left: 30px; padding-right: -20px; height: 300px;">
+          <iframe style=" padding-top: 40px; padding-right: 50px; margin-left: 50px;" src="https://oet-avansat7.intrared.net:8083//ap/sate_zonlog/gesdoc/2023/11/2/20231116084825f4d4306a.png"  class="marco"></iframe>
+      </div>
+    </div>
+  </div>
+

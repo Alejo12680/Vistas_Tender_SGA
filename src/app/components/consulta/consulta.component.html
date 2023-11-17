@@ -1,0 +1,30 @@
+<div class="container pt-4">
+    <div class="row">
+        <div class="col">
+            <h3>
+                <div class="spinner-border text-warning float-end" role="status" *ngIf="loading">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </h3>
+            <form [formGroup]="formCreateConsulta" (ngSubmit)="agregarConsulta()">
+                <div class="row">
+                    <div class="col">
+                        <select class="form-select form-select-lg" aria-label="Default select example" formControlName="consulta" placeholder="Ingrese consulta">
+                            <option *ngFor="let consulta of consultas; let i = index" [value]="i + 1">{{ consulta }}
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="col">
+                        <input class="form-control form-control-lg inputMayuscula" placeholder="Ingrese Número"
+                            formControlName="numero_consulta">
+                    </div>
+                    <div class="col">
+                        <button type="submit" class="btn btn-danger "><img src="../../../assets/boton.png" class="ms-lg-3 me-lg-5" width="35"><strong class="me-lg-3 text_boton">Buscar </strong></button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
