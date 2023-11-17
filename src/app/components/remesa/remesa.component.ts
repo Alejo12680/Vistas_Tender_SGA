@@ -13,8 +13,8 @@ export class RemesaComponent {
 
   // Variables de los array de Objetos ***Para más adelante ser servicios aplicados***:
 
-  public remitente: { remitente: string, cantidad: number, origen: string } = { 
-    remitente: 'KOPPS COMMERCIAL S.A.S-KOPPS COMMERCIAL S.A.S-N. D', cantidad: 10, origen: 'Cúcuta, Norte de Santander' 
+  public remitente: { remitente: string, cantidad: number, origen: string } = {
+    remitente: 'KOPPS COMMERCIAL S.A.S-KOPPS COMMERCIAL S.A.S-N. D', cantidad: 10, origen: 'Cúcuta, Norte de Santander'
   };
 
   public destinatario: { destinatario: string, direccion: string, destino: string } = {
@@ -43,11 +43,11 @@ export class RemesaComponent {
     // Mi servicio BehaviorSubject
     this.miServicio.valorConsulta$.subscribe(valor => {
       // El Split nos ayuda que el string que llega de la consulta se separe y se convierta en un array de string
-      this.valorConsulta = valor.split(''); 
+      this.valorConsulta = valor.split('');
       console.log(this.valorConsulta);
     });
   }
 
-  
+
 
 }

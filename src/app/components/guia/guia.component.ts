@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ServiciosService } from 'src/app/service/servicios.service';
 
 @Component({
   selector: 'app-guia',
@@ -16,7 +17,7 @@ export class GuiaComponent {
 
   posicionHorizontalCirculo: number = 0;
   nombreRemitente: string = "COLOMBIA TELECOMUNICACIONES S.A ESP";
-  ceros: number[] = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+  consultas: string[] = [];
   mostrarCirculo: boolean[] = [false, false, false, false, false, false];
 
   cantidad: number = 9;
@@ -135,4 +136,14 @@ export class GuiaComponent {
     }
   }
 
+  constructor(private miServicio: ServiciosService) {}
+  ngOnInit() {
+
+    // Mi servicio BehaviorSubject
+    this.miServicio.valorConsulta$.subscribe(valor => {
+      // El Split nos ayuda que el string que llega de la consulta se separe y se convierta en un array de string
+      this.consultas = valor.split('');
+      console.log(this.consultas);
+    });
+  }
 }
