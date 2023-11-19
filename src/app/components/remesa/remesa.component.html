@@ -84,11 +84,11 @@
                     <div class="progress-container">
                         <ul>
                             <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                            <li [ngClass]="{'active': estados === 'Asignacion a Vehiculo' || estados === 'En Reparto' || estados === 'Cumplida'}"></li>
+                            <li [ngClass]="{'active': estados === 'En Reparto' || estados === 'Cumplida'}"></li>
+                            <li [ngClass]="{'active': estados === 'Cumplida'}"></li>
                         </ul>
-                        <div class="progress-bar"></div>
+                        <div class="progress-bar" [style]="'width: ' + calcularEstado() + '%'"></div>
                     </div>
                 </div>
             </div>
@@ -96,16 +96,16 @@
             <!-- Estado de la remesa -->
             <div class="row">
                 <div class="col-2">
-                    <p class="text-center"><b>Orden Creada</b></p>
+                    <p class="text-center textEstado">Orden Creada</p>
                 </div>
                 <div class="col-2">
-                    <p class="text-center"><b>Asignacion a Vehiculo</b></p>
+                    <p class="text-center" [ngClass]="{'textEstado': estados === 'Asignacion a Vehiculo' || estados === 'En Reparto' || estados === 'Cumplida'}">Asignacion a Vehiculo</p>
                 </div>
                 <div class="col-2">
-                    <p class="text-center"><b>En Reparto</b></p>
+                    <p class="text-center" [ngClass]="{'textEstado': estados === 'En Reparto' || estados === 'Cumplida'}">En Reparto</p>
                 </div>
                 <div class="col-2">
-                    <p class="text-center"><b>Cumplida</b></p>
+                    <p class="text-center" [ngClass]="{'textEstado': estados === 'Cumplida'}">Cumplida</p>
                 </div>
             </div>
         </div>

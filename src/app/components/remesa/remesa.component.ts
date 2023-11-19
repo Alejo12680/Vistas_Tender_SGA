@@ -34,7 +34,8 @@ export class RemesaComponent {
     {guia: '44-2211400790', factura: 'CO-Ge CUCTA', cod_destinatario: 12498510, destinatario: 'Montes Gazapa', direccion: 'AV 8 CLL 7 ESTE', ciudad: 'Cúcuta', estado: 'Recogido', fechaOperacion: '2023-11-14 10:13:01'},
   ];
 
-  public estados: string[] = ['Orden Creada', 'Asignacion a Vehiculo', 'En Reparto', 'Cumplida'];
+  // 'Orden Creada', 'Asignacion a Vehiculo', 'En Reparto', 'Cumplida'
+  public estados: string = 'Asignacion a Vehiculo';
 
   constructor(private miServicio: ServiciosService) {}
 
@@ -49,5 +50,24 @@ export class RemesaComponent {
   }
 
 
+  calcularEstado() {
+    
+    let total = 0
+
+    if (this.estados === 'Orden Creada') {
+      total = 0
+
+    } if (this.estados === 'Asignacion a Vehiculo') {
+      total = 33
+
+    } if (this.estados === 'En Reparto') {
+      total = 67
+
+    } if (this.estados === 'Cumplida') {
+      total = 100
+    }
+
+    return total
+  }
 
 }

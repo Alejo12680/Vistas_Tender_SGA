@@ -75,17 +75,18 @@ td {
     width: 12px;
     background-color: #ff9900;
     border-radius: 50%;
+    transition: margin-left 0.3s
 }
 
-.progress-container ul li:nth-child(2) {
+.progress-container ul li.active:nth-child(2) {
     margin-left: 33%;
 }
 
-.progress-container ul li:nth-child(3) {
+.progress-container ul li.active:nth-child(3) {
     margin-left: 67%;
 }
 
-.progress-container ul li:last-child {
+.progress-container ul li.active:last-child {
     margin-left: 100%;
 }
 
@@ -104,7 +105,7 @@ td {
 .progress-container .progress-bar {
     position: absolute;
     height: 6px;
-    width: 100%; /* ****** cambiar el estado ****** */
+    width: 0%; /* ****** cambiar el estado ****** */
     top: -1px;
     left: 0;
     margin: 0;
@@ -115,5 +116,8 @@ td {
     -o-transition: width 1s ease-in-out;
     transition: width 1s ease-in-out;
   }
-
 //   ****************************************
+
+.textEstado {
+    font-weight: bold;
+}
