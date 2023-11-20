@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ServiciosService } from 'src/app/service/servicios.service';
 
 @Component({
@@ -8,6 +8,8 @@ import { ServiciosService } from 'src/app/service/servicios.service';
 })
 
 export class RemesaComponent {
+  // se usa ViewChild para obtener una referencia al elemento contenedor de la tabla en el componente TypeScript
+  @ViewChild('tableContainer') tableContainer!: ElementRef;
 
   public valorConsulta: string[] = [];
 
@@ -58,7 +60,7 @@ export class RemesaComponent {
       total = 0
 
     } if (this.estados === 'Asignacion a Vehiculo') {
-      total = 33
+      total = 34
 
     } if (this.estados === 'En Reparto') {
       total = 67
@@ -68,6 +70,13 @@ export class RemesaComponent {
     }
 
     return total
+  }
+
+  //  incrementa la propiedad scrollLeft del contenedor cuando el botón se hace clic.
+  scrollTableRight() {
+    const container = this.tableContainer.nativeElement;
+    // Puedes ajustar la cantidad de desplazamiento según tus necesidades
+    container.scrollLeft += 1000;
   }
 
 }

@@ -10,8 +10,8 @@
         </ul>
     </section>
 
-    <div class="row align-items-center ms-4 mt-4">
-        <div class="col-4">
+    <div class="row align-items-center m-2 mt-4">
+        <div class="col-12 col-md-5">
             <div class="row">
                 <p class="m-0">
                     <strong class="fw-bold tamaño_text">Remitente:</strong> {{remitente.remitente}}
@@ -37,26 +37,26 @@
                 </p>
             </div>
         </div>
-        <div class="col-8">
+        <div class="col-12 col-md-7 mt-4 mt-md-0">
             <!-- Fechas -->
             <div class="row">
-                <div class="col-2">
-                    <p class="text-center">10/11/2023
+                <div class="col-3">
+                    <p class="text-center textPequeño">10/11/2023
                         17:51
                     </p>
                 </div>
-                <div class="col-2">
-                    <p class="text-center">13/11/2023
+                <div class="col-3">
+                    <p class="text-center textPequeño">13/11/2023
                         19:20
                     </p>
                 </div>
-                <div class="col-2">
-                    <p class="text-center">13/11/2023
+                <div class="col-3">
+                    <p class="text-center textPequeño">13/11/2023
                         19:22
                     </p>
                 </div>
-                <div class="col-2">
-                    <p class="text-center">15/11/2023
+                <div class="col-3">
+                    <p class="text-center textPequeño">15/11/2023
                         08:49
                     </p>
                 </div>
@@ -64,23 +64,23 @@
 
             <!-- Imagenes -->
             <div class="row align-items-center text-center">
-                <div class="col-2">
+                <div class="col-3">
                     <img src="../../../assets/documento.png" width="50" />
                 </div>
-                <div class="col-2">
+                <div class="col-3">
                     <img src="../../../assets/camion.png" width="55" />
                 </div>
-                <div class="col-2">
+                <div class="col-3">
                     <img src="../../../assets/repartidor.png" width="55" />
                 </div>
-                <div class="col-2">
+                <div class="col-3">
                     <img src="../../../assets/verificacion.png" width="50" />
                 </div>
             </div>
 
             <!-- Barra de progreso -->
             <div class="row">
-                <div class="col-8">
+                <div class="col-12">
                     <div class="progress-container">
                         <ul>
                             <li></li>
@@ -95,17 +95,17 @@
 
             <!-- Estado de la remesa -->
             <div class="row">
-                <div class="col-2">
-                    <p class="text-center textEstado">Orden Creada</p>
+                <div class="col-3">
+                    <p class="text-center textEstado textPequeño">Orden Creada</p>
                 </div>
-                <div class="col-2">
-                    <p class="text-center" [ngClass]="{'textEstado': estados === 'Asignacion a Vehiculo' || estados === 'En Reparto' || estados === 'Cumplida'}">Asignacion a Vehiculo</p>
+                <div class="col-3">
+                    <p class="text-center textPequeño" [ngClass]="{'textEstado': estados === 'Asignacion a Vehiculo' || estados === 'En Reparto' || estados === 'Cumplida'}">Asignacion a Vehiculo</p>
                 </div>
-                <div class="col-2">
-                    <p class="text-center" [ngClass]="{'textEstado': estados === 'En Reparto' || estados === 'Cumplida'}">En Reparto</p>
+                <div class="col-3">
+                    <p class="text-center textPequeño" [ngClass]="{'textEstado': estados === 'En Reparto' || estados === 'Cumplida'}">En Reparto</p>
                 </div>
-                <div class="col-2">
-                    <p class="text-center" [ngClass]="{'textEstado': estados === 'Cumplida'}">Cumplida</p>
+                <div class="col-3">
+                    <p class="text-center textPequeño" [ngClass]="{'textEstado': estados === 'Cumplida'}">Cumplida</p>
                 </div>
             </div>
         </div>
@@ -113,41 +113,45 @@
     <hr class="mt-4" size="5px" color="black" />
 
     <!-- Tabla de las remesas -->
-    <div class="row">
-        <table class="table table-hover">
-            <thead>
-                <tr>
-                    <th>Guia</th>
-                    <th>Factura</th>
-                    <th>Cod.Destinatario</th>
-                    <th>Destinatario</th>
-                    <th>Direccion</th>
-                    <th>Ciudad</th>
-                    <th>Estado</th>
-                    <th>Fecha de Operacion</th>
-                    <th>Comprobante</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let datos of datosTable">
-                    <td><strong>{{datos.guia}} </strong></td>
-                    <td>{{datos.factura}} </td>
-                    <td>{{datos.cod_destinatario}} </td>
-                    <td>{{datos.destinatario}} </td>
-                    <td>{{datos.direccion}} </td>
-                    <td>{{datos.ciudad}} </td>
-                    <td>{{datos.estado}} </td>
-                    <td>{{datos.fechaOperacion}} </td>
-                    <td class="text-center">
-                        <a [href]="'https://nmvpostal.com/v1/verboleta/'+datos.guia"
-                            target="_blank">
-                            <button type="submit" class="btn">
-                                <img src="../../../assets/hoja.png" class="me-4" width="25" />Ver
-                            </button>
-                        </a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+    <button class="buton_table" (click)="scrollTableRight()">></button>
+
+    <div class="row table-responsive">
+        <div #tableContainer class="table-scrollable">
+            <table class="table table-hover table-sm">
+                <thead>
+                    <tr>
+                        <th>Guia</th>
+                        <th>Factura</th>
+                        <th>Cod.Destinatario</th>
+                        <th>Destinatario</th>
+                        <th>Direccion</th>
+                        <th>Ciudad</th>
+                        <th>Estado</th>
+                        <th>Fecha de Operacion</th>
+                        <th>Comprobante</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let datos of datosTable">
+                        <td><strong>{{datos.guia}} </strong></td>
+                        <td>{{datos.factura}} </td>
+                        <td>{{datos.cod_destinatario}} </td>
+                        <td>{{datos.destinatario}} </td>
+                        <td>{{datos.direccion}} </td>
+                        <td>{{datos.ciudad}} </td>
+                        <td>{{datos.estado}} </td>
+                        <td>{{datos.fechaOperacion}} </td>
+                        <td class="text-center">
+                            <a [href]="'https://nmvpostal.com/v1/verboleta/'+datos.guia"
+                                target="_blank">
+                                <button type="submit" class="btn">
+                                    <img src="../../../assets/hoja.png" class="me-4" width="25" />Ver
+                                </button>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>

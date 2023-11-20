@@ -26,7 +26,7 @@
 }
 
 .linea_punteada {
-    width: 70%;
+    width: 80%;
     border: none;
     border-top: 4px dotted #000000;
     margin: 10px 0;
@@ -59,7 +59,7 @@ td {
     position: relative;
     margin: 20px auto;
     padding: 4px 0 0;
-    width: 80%;
+    width: 78%;
     height: 4px;
     background-color: #ffc46b;
 }
@@ -79,7 +79,7 @@ td {
 }
 
 .progress-container ul li.active:nth-child(2) {
-    margin-left: 33%;
+    margin-left: 34%;
 }
 
 .progress-container ul li.active:nth-child(3) {
@@ -105,7 +105,8 @@ td {
 .progress-container .progress-bar {
     position: absolute;
     height: 6px;
-    width: 0%; /* ****** cambiar el estado ****** */
+    width: 0%;
+    /* ****** cambiar el estado ****** */
     top: -1px;
     left: 0;
     margin: 0;
@@ -115,9 +116,48 @@ td {
     -moz-transition: width 1s ease-in-out;
     -o-transition: width 1s ease-in-out;
     transition: width 1s ease-in-out;
-  }
+}
+
 //   ****************************************
 
 .textEstado {
     font-weight: bold;
+}
+
+.table-scrollable {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch; /* Agrega un desplazamiento suave en iOS */
+    transition: scroll-left 0.5s ease;
+}
+
+.buton_table {
+    opacity: 0;
+    display: none;
+}
+
+
+/* Breack Poins */
+@media (max-width: 768px) {
+
+    .textPequeño {
+        font-size: 14.5px;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .buton_table {
+        margin-bottom: 10px;
+        border-radius: 50%;
+        color: #b7b6b6;
+        background-color: #000000;
+        font-size: 25px;
+        font-weight: bold;
+        height: 40px;
+        width: 40px;
+        opacity: 1;
+        display: block;
+        border: none;
+    }
 }
