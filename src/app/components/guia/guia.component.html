@@ -10,9 +10,9 @@
       </ul>
     </div>
     <div class="row">
-      <div class="col-4">
+      <div class="col-3">
         <ul class="variables">
-          <li><em style="font-weight: bold;" >Remitente</em>: {{nombreRemitente}}</li>
+          <li style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><em style="font-weight: 700; font-family: Verdana, Geneva, Tahoma, sans-serif;" >Remitente</em>: {{nombreRemitente}}</li>
           <li><em style="font-weight: bold;">cantidad</em>: {{cantidad}}</li>
           <li><em style="font-weight: bold;">Origen</em>: {{origen}}</li>
         </ul>
@@ -20,8 +20,8 @@
           ............................
         </p>
       </div>
-      <div class="col-8" >
-        <ul class="float-sm-left" *ngFor="let step of steps; let i = index" (mouseover)="actualizarProgreso(step.id)">
+      <div class="col-9 expandirTamanio" >
+        <ul class="float-sm-left fechasIconos" *ngFor="let step of steps; let i = index" (mouseover)="actualizarProgreso(step.id)">
           <li>{{ step.date }}</li>
           <li style="text-align: center;">{{ step.time }}</li>
           <li style="text-align: center">
@@ -29,68 +29,76 @@
           </li>
         </ul>
       </div>
+    </div>
 
-      <div class="col-4">
+
+    
+      <div class="row">
+
+        <div class="col-3">
         <ul class="variablesDest">
           <li style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><em style="font-weight: 700; font-family: Verdana, Geneva, Tahoma, sans-serif;">Destinatario</em>:  {{nombreRemitente}}</li>
           <li><em style="font-weight: bold;">Dirección</em>: {{cantidad}}</li>
           <li><em style="font-weight: bold;">Destino</em>: {{destino}}</li>
         </ul>
-      </div>
+        </div>
+        <div class="col-9">
+          <ul class="progresoLinea">
+            <li *ngIf="progresoActual > 0">
 
-      <div class="col-8">
-        <ul class="progresoLinea">
-          <li *ngIf="progresoActual > 0">
+              <div class="progress">
+                <div
+                class="progress-bar"
+                role="progressbar"
+                [style.width.%]="progresoActual"
+                [attr.aria-valuenow]="progresoActual"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                style="background-color: #ff9900"
 
-            <div class="progress">
-              <div
-              class="progress-bar"
-              role="progressbar"
-              [style.width.%]="progresoActual"
-              [attr.aria-valuenow]="progresoActual"
-              aria-valuemin="0"
-              aria-valuemax="100"
-              style="background-color: #ff9900"
+                >
 
-              >
+                </div>
+                <div class="circulo-progreso" [style.left.px]="posicionHorizontalCirculo"></div>
+                <div class="circulo-progreso" [style.left.px]="progreso"></div>
+                <div class="circulo-progreso" [style.left.px]="progreso1"></div>
+                <div class="circulo-progreso" [style.left.px]="progreso2"></div>
+                <div class="circulo-progreso" [style.left.px]="progreso3"></div>
+                <div class="circulo-progreso" [style.left.px]="progreso4"></div>
+                <div class="circulo-progreso" [style.left.px]="progreso5"></div>
 
               </div>
-              <div class="circulo-progreso" [style.left.px]="posicionHorizontalCirculo"></div>
-              <div class="circulo-progreso" [style.left.px]="progreso"></div>
-              <div class="circulo-progreso" [style.left.px]="progreso1"></div>
-              <div class="circulo-progreso" [style.left.px]="progreso2"></div>
-              <div class="circulo-progreso" [style.left.px]="progreso3"></div>
-              <div class="circulo-progreso" [style.left.px]="progreso4"></div>
-              <div class="circulo-progreso" [style.left.px]="progreso5"></div>
+            </li>
 
-            </div>
-          </li>
-
-        </ul>
-        <div>
-          <ul class="letrasLinea">
-            <li class="recogida">Recogida</li>
-          </ul>
-          <ul class="letrasLinea">
-            <li class="bodegaOrigen">En bodega Origen</li>
-            <li class="plataforma">{{plataforma}}</li>
-          </ul>
-          <ul class="letrasLinea">
-            <li style="margin-top: 35px; margin-left: -20px; font-weight: bold;">En Tránsito</li>
-          </ul>
-          <ul class="letrasLinea">
-            <li class="Bodega">En bodega</li>
-            <li class="plataforma2">{{plataforma}}</li>
-          </ul>
-          <ul class="letrasLinea">
-            <li class="reparto" >En reparto</li>
-          </ul>
-          <ul class="letrasLinea">
-            <li class="entregado">Entregado</li>
-          </ul>
+            </ul>
+          <div>
+            <ul class="letrasLinea">
+              <li class="recogida">Recogida</li>
+            </ul>
+            <ul class="letrasLinea">
+              <li class="bodegaOrigen">En bodega Origen</li>
+              <li class="plataforma">{{plataforma}}</li>
+            </ul>
+            <ul class="letrasLinea">
+              <li class="enTransito">En Tránsito</li>
+            </ul>
+            <ul class="letrasLinea">
+              <li class="Bodega">En bodega</li>
+              <li class="plataforma2">{{plataforma}}</li>
+            </ul>
+            <ul class="letrasLinea">
+              <li class="reparto" >En reparto</li>
+            </ul>
+            <ul class="letrasLinea">
+              <li class="entregado">Entregado</li>
+            </ul>
+          </div>
         </div>
+
       </div>
-    </div>
+
+
+
     <div class="row">
       <div class="col-3">
           <div class="botonEstado">

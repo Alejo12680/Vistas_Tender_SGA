@@ -65,7 +65,7 @@ export class GuiaComponent {
     }
     }
     else if(id == 2){
-      this.progresoActual = id * 9.6;
+      this.progresoActual = id * 10;
       this.mostrarCirculo[id] = true;
       if(this.mostrarCirculo[id] == true){
         if (contenedor) {
@@ -78,7 +78,7 @@ export class GuiaComponent {
     }
     }
     else if(id == 3){
-      this.progresoActual = (id+1) * 9.7;
+      this.progresoActual = (id+1) * 10;
       this.mostrarCirculo[id] = true;
       if(this.mostrarCirculo[id] == true){
         if (contenedor) {
@@ -91,7 +91,7 @@ export class GuiaComponent {
     }
     }
     else if(id == 4){
-      this.progresoActual = (id+2) * 9.9;
+      this.progresoActual = (id+2) * 10;
       this.mostrarCirculo[id] = true;
       if(this.mostrarCirculo[id] == true){
         if (contenedor) {

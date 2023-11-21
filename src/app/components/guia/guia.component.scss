@@ -19,6 +19,7 @@ ul
   font-size: 40px;
   padding-right: 20px;
   border: none;
+  margin-left: -80px;
 }
 .variables{
 
@@ -26,43 +27,46 @@ ul
     color: black;
     padding-right: -100px;
     margin-bottom: -25px;
+    margin-left: -80px;
 }
 .puntos{
   font-size: 40px;
   margin-top: 0px;
   letter-spacing: 2px;
+  margin-left: -80px;
 
+ }
+ .expandirTamanio{
+    margin-left: 350px;
+    margin-top: -160px;
  }
  .iconos{
   width: 50px;
  }
 .variablesDest{
-  font-size: 17px;
-  margin-bottom: -25px;
-  margin-top: -120px;
-  color: black;
+  font-size: 18px;
   padding-right: -100px;
+  margin-bottom: -25px;
+  margin-top: -10px;
+  margin-left: -80px;
 }
 
-div.col-4{
-    margin-bottom: 100px;
-}
 .circulo-progreso {
   width: 20px;
   height: 20px;
   background-color: #ffc46b;
   border-radius: 50%;
   position: absolute;
-  top: -130%;
+  top: -40%;
   left: calc(var(--progreso) - 500px);
   transform: translate(-50%, -50%);
-  margin-left: 90px;
+  margin-left: 150px;
   z-index: 1;
 }
 .progresoLinea{
   margin-bottom: -25px;
-  margin-top: -130px;
-  margin-left: 40px;
+  margin-top: -30px;
+  margin-left: 100px;
 }
 .progress{
   width: 570px;
@@ -72,33 +76,38 @@ div.col-4{
   float: left;
 }
 .recogida{
-  margin-top: 35px;
-  margin-left: 10px;
+  margin-top: 40px;
+  margin-left: 75px;
 }
 .bodegaOrigen{
-  margin-top: 35px;
-  margin-left: -10px;
+  margin-top: 40px;
+  margin-left: -15px;
   font-weight: bold;
 }
 .plataforma{
-  margin-left: 5px;
+  margin-left: 0px;
 }
 .Bodega{
-  margin-top: 35px;
-  margin-left: -10px;
+  margin-top: 40px;
+  margin-left: -15px;
+  font-weight: bold;
+}
+.enTransito{
+  margin-top: 40px;
+  margin-left: -15px;
   font-weight: bold;
 }
 .plataforma2{
-  margin-left:-15px
+  margin-left:-20px
 }
 .reparto{
-  margin-top: 35px;
-  margin-left: -20px;
+  margin-top: 40px;
+  margin-left: -15px;
   font-weight: bold;
 }
 .entregado{
-  margin-top: 35px;
-  margin-left: 5px;
+  margin-top: 40px;
+  margin-left: 0px;
   font-weight: bold;
 }
 
@@ -116,8 +125,9 @@ div.col-4{
   border: 1px solid #b9d2fb;
   border-radius: 10px;
   background-color: #efefef;
-  margin-top: -30px;
-  width: 320px;
+  margin-top: 140px;
+  width: 340px;
+  margin-left: -80px;
 }
 .estado{
   padding-top: 10px;
@@ -125,26 +135,27 @@ div.col-4{
 }
 .marco{
   width: 100%;
-  height: 100%;
+  height: 300px;
   padding-top: 20px;
   padding-left: -10px;
 }
 .marcoDiv{
-  margin-left: 80px;
-  margin-top: -140px;
-
+  margin-left: 20px;
+  margin-top: -20px;
+  height: 360px;
   border: 1px dashed black;
   padding-right: -20px;
-  height: 300px;
+
 }
 .visualizar{
-  display: inline-block;
+ display: inline-block;
  text-decoration: none;
  margin-top: 20px;
  margin-left: 550px;
  padding: 1px;
  border: 1px solid efefef;
  border-radius: 10px;
+ cursor: pointer;
 
 }
 .visualizar:hover{
@@ -172,141 +183,1106 @@ div.col-4{
 
 
 /*RESPONSIVE*/
+//1340
+@media(width < 1340px) {
 
-@media(width < 1200px) {
+  .visualizar{
+
+    margin-left: 600px;
+  }
+  .guia{
+
+    margin-left: -60px;
+
+  }
+  .variables{
+
+    margin-left: -80px;
+
+
+  }
+  .puntos{
+
+    margin-left: -80px;
+
+
+   }
+   .variablesDest{
+    margin-left: -80px;
+  }
+
+  .botonEstado{
+    margin-left: -70px;
+  }
+}
+//1300
+@media(width < 1300px) {
 
   .guia{
-    display: inline-block;
-     font-size: 30px;
-     padding-right: 20px;
-     margin-left: -85px;
+
+    margin-left: -50px;
+
+  }
+  .variables{
+    margin-left: -70px;
+    font-size: 16px;
+
+
+  }
+  .puntos{
+
+    margin-left: -70px;
+    font-size: 40px;
+
+
    }
-   .ceros{
-      display: inline-block;
-      border: 1px solid black;
-      font-size: 23px;
+   .variablesDest{
+    margin-left: -70px;
+    font-size: 16px;
+  }
+
+  .botonEstado{
+    margin-left: -50px;
+    width: 320px;
+  }
+  .circulo-progreso {
+
+    top: -48%;
+
    }
-   .variables{
-    display: inline-block;
-    font-size: 30px;
-    padding-right: 40px;
+}
+//1280
+@media(width < 1280px) {
+  .guia{
+
+    margin-left: -30px;
+
+  }
+  .variables{
+    margin-left: -50px;
+    font-size: 16px;
+
+
+  }
+  .puntos{
+
+    margin-left: -50px;
+    font-size: 40px;
+
+
+   }
+   .variablesDest{
+    margin-left: -50px;
+    font-size: 16px;
+  }
+
+  .botonEstado{
+    margin-left: -40px;
+    width: 300px;
+  }
+  .circulo-progreso {
+
+    top: -48%;
+
+   }
+
+}
+//1240
+
+@media(width < 1240px) {
+  .guia{
+
+    margin-left: -10px;
+
+  }
+  .variables{
+    margin-left: -30px;
+    font-size: 16px;
+
+
+  }
+  .puntos{
+
+    margin-left: -30px;
+    font-size: 40px;
+
+
+   }
+   .variablesDest{
+    margin-left: -30px;
+    font-size: 16px;
+  }
+
+  .botonEstado{
+    margin-left: -20px;
+    width: 280px;
+  }
+  .circulo-progreso {
+
+    top: -33%;
+
+   }
+
+}
+//1200
+@media(width < 1200px) {
+
+
+  .guia{
+
+    margin-left: -80px;
+
+  }
+  .variables{
     margin-left: -100px;
+    font-size: 16px;
+
+
+  }
+  .puntos{
+
+    margin-left: -100px;
+    font-size: 40px;
+
+
    }
-   .puntos{
-    display: inline-block;
+   .variablesDest{
+    margin-left: -100px;
+    font-size: 16px;
+  }
+
+  .botonEstado{
+    margin-top: 100px;
+    margin-left: -80px;
+    width: 290px;
+  }
+  .circulo-progreso {
+
+    top: -46%;
+
+   }
+   .expandirTamanio{
+    margin-left: 305px;
+    margin-top: -160px;
+ }
+
+
+.recogida{
+  margin-top: 40px;
+  margin-left: 70px;
+}
+.bodegaOrigen{
+  margin-top: 40px;
+  margin-left: -20px;
+  font-weight: bold;
+}
+.plataforma{
+  margin-left: 0px;
+}
+.Bodega{
+  margin-top: 40px;
+  margin-left: -10px;
+  font-weight: bold;
+}
+.enTransito{
+  margin-top: 40px;
+  margin-left: -25px;
+  font-weight: bold;
+}
+.plataforma2{
+  margin-left:-16px
+}
+.reparto{
+  margin-top: 40px;
+  margin-left: -20px;
+  font-weight: bold;
+  margin-right: -5px;
+}
+.entregado{
+  margin-right: -70px;
+  margin-top: 40px;
+  margin-left: 5px;
+  font-weight: bold;
+}
+.letrasLinea{
+  margin-right: 5px;
+  margin-left: 0px;
+}
+
+.marco{
+  width: 100%;
+  height: 300px;
+  padding-top: 20px;
+  padding-left: -10px;
+}
+.marcoDiv{
+  margin-left: 20px;
+  margin-top: -10px;
+  height: 360px;
+  border: 1px dashed black;
+  margin-right: -80px;
+
+}
+.visualizar{
+ display: inline-block;
+ text-decoration: none;
+ margin-top: 20px;
+ margin-left: 550px;
+ padding: 1px;
+ border: 1px solid efefef;
+ border-radius: 10px;
+ cursor: pointer;
+
+  }
+}
+
+//1150
+@media(width < 1150px) {
+
+
+  .guia{
+
+    margin-left: -60px;
+
+  }
+  .variables{
+    margin-left: -80px;
+    font-size: 16px;
+
+
+  }
+  .puntos{
+
+    margin-left: -80px;
+    font-size: 40px;
+
+
+   }
+   .variablesDest{
+    margin-left: -80px;
+    font-size: 16px;
+  }
+
+  .botonEstado{
+    margin-left: -60px;
+
+    width: 290px;
+  }
+
+   .expandirTamanio{
+    margin-left: 260px;
+    margin-top: -160px;
+ }
+
+
+.recogida{
+  margin-top: 40px;
+  margin-left: 20px;
+}
+.bodegaOrigen{
+  margin-top: 40px;
+  margin-left: -20px;
+  font-weight: bold;
+}
+.plataforma{
+  margin-left: 0px;
+}
+.Bodega{
+  margin-top: 40px;
+  margin-left: -10px;
+  font-weight: bold;
+}
+.enTransito{
+  margin-top: 40px;
+  margin-left: -25px;
+  font-weight: bold;
+}
+.plataforma2{
+  margin-left:-16px
+}
+.reparto{
+  margin-top: 40px;
+  margin-left: -20px;
+  font-weight: bold;
+  margin-right: -5px;
+}
+.entregado{
+  margin-right: -70px;
+  margin-top: 40px;
+  margin-left: 5px;
+  font-weight: bold;
+}
+.letrasLinea{
+  margin-right: 5px;
+  margin-left: 0px;
+}
+
+.marco{
+  width: 100%;
+  height: 300px;
+  padding-top: 20px;
+  padding-left: -10px;
+}
+.marcoDiv{
+  margin-left: 20px;
+  margin-top: -10px;
+  height: 350px;
+  border: 1px dashed black;
+  margin-right: -60px;
+
+}
+.visualizar{
+ display: inline-block;
+ text-decoration: none;
+ margin-top: 20px;
+ margin-left: 550px;
+ padding: 1px;
+ border: 1px solid efefef;
+ border-radius: 10px;
+ cursor: pointer;
+
+  }
+  .circulo-progreso {
+    width: 20px;
+    height: 20px;
+    background-color: #ffc46b;
+    border-radius: 50%;
+    position: absolute;
+    top: -33%;
+    left: calc(var(--progreso) - 500px);
+    transform: translate(-50%, -50%);
+    margin-left: 105px;
+    z-index: 1;
+  }
+  .progresoLinea{
+    margin-bottom: -25px;
+    margin-top: -30px;
+    margin-left: 60px;
+  }
+  .progress{
+    width: 570px;
+    height: 3px;
+  }
+
+
+
+
+}
+ //1120
+ @media(width < 1120px) {
+
+
+  .guia{
+
+    margin-left: -40px;
+
+  }
+  .variables{
+    margin-left: -60px;
+    font-size: 16px;
+
+
+  }
+  .puntos{
+
+    margin-left: -60px;
+    font-size: 40px;
+
+
+   }
+   .variablesDest{
+    margin-left: -60px;
+    font-size: 16px;
+  }
+
+  .botonEstado{
+    margin-left: -40px;
+
+    width: 270px;
+  }
+
+   .expandirTamanio{
+    margin-left: 260px;
+    margin-top: -160px;
+ }
+
+
+.recogida{
+  margin-top: 40px;
+  margin-left: 20px;
+}
+.bodegaOrigen{
+  margin-top: 40px;
+  margin-left: -20px;
+  font-weight: bold;
+}
+.plataforma{
+  margin-left: 0px;
+}
+.Bodega{
+  margin-top: 40px;
+  margin-left: -10px;
+  font-weight: bold;
+}
+.enTransito{
+  margin-top: 40px;
+  margin-left: -25px;
+  font-weight: bold;
+}
+.plataforma2{
+  margin-left:-16px
+}
+.reparto{
+  margin-top: 40px;
+  margin-left: -20px;
+  font-weight: bold;
+  margin-right: -5px;
+}
+.entregado{
+  margin-right: -70px;
+  margin-top: 40px;
+  margin-left: 5px;
+  font-weight: bold;
+}
+.letrasLinea{
+  margin-right: 5px;
+  margin-left: 0px;
+}
+
+.marco{
+  width: 100%;
+  height: 300px;
+  padding-top: 20px;
+  padding-left: -10px;
+}
+.marcoDiv{
+  margin-left: 20px;
+  margin-top: -10px;
+  height: 350px;
+  border: 1px dashed black;
+  margin-right: -40px;
+
+}
+.visualizar{
+ display: inline-block;
+ text-decoration: none;
+ margin-top: 20px;
+ margin-left: 550px;
+ padding: 1px;
+ border: 1px solid efefef;
+ border-radius: 10px;
+ cursor: pointer;
+
+  }
+  .circulo-progreso {
+    width: 20px;
+    height: 20px;
+    background-color: #ffc46b;
+    border-radius: 50%;
+    position: absolute;
+    top: -33%;
+    left: calc(var(--progreso) - 500px);
+    transform: translate(-50%, -50%);
+    margin-left: 105px;
+    z-index: 1;
+  }
+  .progresoLinea{
+    margin-bottom: -25px;
+    margin-top: -30px;
+    margin-left: 60px;
+  }
+  .progress{
+    width: 570px;
+    height: 3px;
+  }
+}
+//1100
+@media(width < 1100px) {
+
+
+  .guia{
+
+    margin-left: -20px;
+
+  }
+  .variables{
+    margin-left: -40px;
+    font-size: 16px;
+    margin-bottom: -10px;
+
+
+  }
+  .puntos{
+
+    margin-left: -40px;
+    font-size: 35px;
+
+}
+   .variablesDest{
+    margin-left: -40px;
+    font-size: 16px;
+  }
+
+  .botonEstado{
+    margin-left: -20px;
+
+    width: 240px;
+  }
+
+   .expandirTamanio{
+    margin-left: 260px;
+    margin-top: -180px;
+ }
+
+
+.recogida{
+  margin-top: 40px;
+  margin-left: 20px;
+}
+.bodegaOrigen{
+  margin-top: 40px;
+  margin-left: -20px;
+  font-weight: bold;
+}
+.plataforma{
+  margin-left: 0px;
+}
+.Bodega{
+  margin-top: 40px;
+  margin-left: -10px;
+  font-weight: bold;
+}
+.enTransito{
+  margin-top: 40px;
+  margin-left: -25px;
+  font-weight: bold;
+}
+.plataforma2{
+  margin-left:-16px
+}
+.reparto{
+  margin-top: 40px;
+  margin-left: -20px;
+  font-weight: bold;
+  margin-right: -5px;
+}
+.entregado{
+  margin-right: -70px;
+  margin-top: 40px;
+  margin-left: 5px;
+  font-weight: bold;
+}
+.letrasLinea{
+  margin-right: 5px;
+  margin-left: 0px;
+}
+
+.marco{
+  width: 100%;
+  height: 300px;
+  padding-top: 20px;
+  padding-left: -10px;
+}
+.marcoDiv{
+  margin-left: 20px;
+  margin-top: -10px;
+  height: 350px;
+  border: 1px dashed black;
+  margin-right: -40px;
+
+}
+.visualizar{
+ display: inline-block;
+ text-decoration: none;
+ margin-top: 20px;
+ margin-left: 550px;
+ padding: 1px;
+ border: 1px solid efefef;
+ border-radius: 10px;
+ cursor: pointer;
+
+  }
+  .circulo-progreso {
+    width: 20px;
+    height: 20px;
+    background-color: #ffc46b;
+    border-radius: 50%;
+    position: absolute;
+    top: -33%;
+    left: calc(var(--progreso) - 500px);
+    transform: translate(-50%, -50%);
+    margin-left: 105px;
+    z-index: 1;
+  }
+  .progresoLinea{
+    margin-bottom: -25px;
+    margin-top: -30px;
+    margin-left: 60px;
+  }
+  .progress{
+    width: 570px;
+    height: 3px;
+  }
+}
+
+
+//1050
+@media(width < 1050px) {
+
+
+  .guia{
+
+    margin-left: 0px;
+
+  }
+  .variables{
+    margin-left: -20px;
+    font-size: 16px;
+    margin-bottom: -10px;
+
+
+  }
+  .puntos{
+
+    margin-left: -20px;
+    font-size: 35px;
+
+}
+   .variablesDest{
+    margin-left: -20px;
+    font-size: 16px;
+  }
+
+  .botonEstado{
+    margin-left: 0px;
+
+    width: 220px;
+  }
+
+   .expandirTamanio{
+    margin-left: 250px;
+    margin-top: -180px;
+ }
+.iconos{
+  width: 40px;
+}
+.fechasIconos{
+  font-size: 15px;
+}
+
+.recogida{
+  margin-top: 40px;
+  margin-left: 10px;
+}
+.bodegaOrigen{
+  margin-top: 40px;
+  margin-left: -30px;
+  font-weight: bold;
+}
+.plataforma{
+  margin-left: 0px;
+}
+.Bodega{
+  margin-top: 40px;
+  margin-left: -10px;
+  font-weight: bold;
+}
+.enTransito{
+  margin-top: 40px;
+  margin-left: -25px;
+  font-weight: bold;
+}
+.plataforma2{
+  margin-left:-16px
+}
+.reparto{
+  margin-top: 40px;
+  margin-left: -25px;
+  font-weight: bold;
+  margin-right: -5px;
+}
+.entregado{
+  margin-right: -70px;
+  margin-top: 40px;
+  margin-left: 0px;
+  font-weight: bold;
+}
+.letrasLinea{
+  margin-right: 5px;
+  margin-left: 0px;
+}
+
+.marco{
+  width: 100%;
+  height: 250px;
+  padding-top: 20px;
+  padding-left: -10px;
+}
+.marcoDiv{
+  margin-left: 20px;
+  margin-top: -10px;
+  height: 300px;
+  border: 1px dashed black;
+  margin-right: -20px;
+
+}
+.visualizar{
+ display: inline-block;
+ text-decoration: none;
+ margin-top: 20px;
+ margin-left: 550px;
+ padding: 1px;
+ border: 1px solid efefef;
+ border-radius: 10px;
+ cursor: pointer;
+
+  }
+  .circulo-progreso {
+    width: 20px;
+    height: 20px;
+    background-color: #ffc46b;
+    border-radius: 50%;
+    position: absolute;
+    top: -45%;
+    left: calc(var(--progreso) - 500px);
+    transform: translate(-50%, -50%);
+    margin-left: 91px;
+    z-index: 1;
+  }
+  .progresoLinea{
+    margin-bottom: -25px;
+    margin-top: -50px;
+    margin-left: 45px;
+  }
+  .progress{
+    width: 550px;
+    height: 3px;
+  }
+}
+//1020
+
+@media(width < 1020px) {
+
+
+  .guia h2{
+
+    margin-left: 20px;
+    font-size: 25px;
+  }
+  .variables{
+    margin-left: 0px;
+    font-size: 14px;
+    margin-bottom: -10px;
+
+
+  }
+  .puntos{
+
+    margin-left: 0px;
     font-size: 30px;
-    padding-right: 40px;
+
+}
+  .variablesDest{
+    margin-left: 0px;
+    font-size: 14px;
+  }
+
+  .botonEstado{
+    margin-left: 0px;
+    width: 220px;
+  }
+
+   .expandirTamanio{
+    margin-left: 260px;
+    margin-top: -157px;
+ }
+.iconos{
+  width: 40px;
+}
+.fechasIconos{
+  font-size: 14px;
+}
+
+.recogida{
+  font-size: 14px;
+  margin-top: 40px;
+  margin-left: 30px;
+}
+.bodegaOrigen{
+  font-size: 14px;
+  margin-top: 40px;
+  margin-left: -25px;
+  font-weight: bold;
+}
+.plataforma{
+  font-size: 14px;
+  margin-left: -5px;
+}
+.Bodega{
+  font-size: 14px;
+  margin-top: 40px;
+  margin-left: -10px;
+  font-weight: bold;
+}
+.enTransito{
+  font-size: 14px;
+  margin-top: 40px;
+  margin-left: -25px;
+  font-weight: bold;
+}
+.plataforma2{
+  font-size: 14px;
+  margin-left:-16px
+}
+.reparto{
+  font-size: 14px;
+  margin-top: 40px;
+  margin-left: -15px;
+  font-weight: bold;
+  margin-right: -5px;
+}
+.entregado{
+  font-size: 14px;
+  margin-right: -70px;
+  margin-top: 40px;
+  margin-left: 0px;
+  font-weight: bold;
+}
+.letrasLinea{
+  margin-right: 5px;
+  margin-left: 0px;
+}
+
+.marco{
+  width: 100%;
+  height: 200px;
+  padding-top: 10px;
+  padding-left: -10px;
+}
+.marcoDiv{
+  margin-left: 20px;
+  margin-top: -30px;
+  height: 250px;
+  border: 1px dashed black;
+  margin-right: 10px;
+
+}
+.visualizar{
+ display: inline-block;
+ text-decoration: none;
+ margin-top: 10px;
+ margin-left: 480px;
+ padding: 1px;
+ border: 1px solid efefef;
+ border-radius: 10px;
+ cursor: pointer;
+
+  }
+  .circulo-progreso {
+    width: 20px;
+    height: 20px;
+    background-color: #ffc46b;
+    border-radius: 50%;
+    position: absolute;
+    top: -54%;
+    left: calc(var(--progreso) - 500px);
+    transform: translate(-50%, -50%);
+    margin-left: 103px;
+    z-index: 1;
+  }
+  .progresoLinea{
+    margin-bottom: -25px;
+    margin-top: -50px;
+    margin-left: 55px;
+  }
+  .progress{
+    width: 515px;
+    height: 3px;
+  }
+}
+
+
+//992
+
+@media(width < 992px) {
+
+
+  .guia{
+
+    margin-left: -120px;
+
+  }
+  .variables{
+    margin-left: -110px;
+    font-size: 14px;
+    margin-bottom: -10px;
+
+
+  }
+  .puntos{
+
+    margin-left: -110px;
+    font-size: 30px;
+    margin-bottom: 15px;
+
+}
+  .variablesDest{
+    margin-left: -110px;
+    font-size: 14px;
+  }
+
+  .botonEstado{
+    margin-left: -100px;
+    width: 260px;
+  }
+
+   .expandirTamanio{
+    margin-right: -150px;
+    padding-right: 0px;
+    margin-left: 190px;
+    margin-top: -155px;
+ }
+.iconos{
+  width: 40px;
+}
+.fechasIconos{
+  font-size: 14px;
+  padding-right: 0px;
+  margin-right: -15px;
+  padding-left: 30px;
+  margin-left: 2px;
+}
+
+.recogida{
+  font-size: 12px;
+  margin-top: 40px;
+  margin-left: 20px;
+}
+.bodegaOrigen {
+  font-size: 12px;
+  margin-left: -25p;
+}
+
+.plataforma{
+  font-size: 12px;
+  margin-left: -10px;
+}
+.Bodega{
+  font-size: 12px;
+  margin-top: 40px;
+  margin-left: -10px;
+  font-weight: bold;
+}
+.enTransito{
+  font-size: 12px;
+  margin-top: 40px;
+  margin-left: -25px;
+  font-weight: bold;
+}
+.plataforma2{
+  font-size: 12px;
+  margin-left:-16px
+}
+.reparto{
+  font-size: 12px;
+  margin-top: 40px;
+  margin-left: -20px;
+  font-weight: bold;
+  margin-right: -5px;
+}
+.entregado{
+  font-size: 12px;
+  margin-right: -70px;
+  margin-top: 40px;
+  margin-left: -5px;
+  font-weight: bold;
+}
+.letrasLinea{
+  margin-right: 5px;
+  margin-left: 0px;
+}
+
+.marco{
+  width: 100%;
+  height: 200px;
+  padding-top: 10px;
+  padding-left: -10px;
+}
+.marcoDiv{
+  margin-left: 20px;
+  margin-top: -30px;
+  height: 250px;
+  border: 1px dashed black;
+  margin-right: -80px;
+
+}
+.visualizar{
+ display: inline-block;
+ text-decoration: none;
+ margin-top: 10px;
+ margin-left: 400px;
+ padding: 1px;
+ border: 1px solid efefef;
+ border-radius: 10px;
+ cursor: pointer;
+
+  }
+  .circulo-progreso {
+    width: 20px;
+    height: 20px;
+    background-color: #ffc46b;
+    border-radius: 50%;
+    position: absolute;
+    top: -70%;
+    left: calc(var(--progreso) - 500px);
+    transform: translate(-50%, -50%);
+    margin-left: 91px;
+    z-index: 1;
+  }
+  .progresoLinea{
+    margin-bottom: -25px;
+    margin-top: -50px;
+    margin-left: 40px;
+  }
+  .progress{
+    width: 445px;
+    height: 3px;
+  }
+}
+
+//960
+
+@media(width < 960px) {
+
+
+  .guia{
+
     margin-left: -100px;
 
-   }
-   div.variablesDest{
-    display: inline-block;
+  }
+  .variables{
+    margin-left: -90px;
+    font-size: 14px;
+    margin-bottom: -10px;
+
+
+  }
+  .puntos{
+
+    margin-left: -90px;
     font-size: 30px;
-    padding-right: 40px;
-    margin-left: -100px;
-    }
-    .variablesDest{
-      display: inline-block;
-      font-size: 30px;
-      padding-right: 40px;
-      margin-left: -100px;
-      }
- }
+    margin-bottom: 15px;
 
- @media(width < 1124px) {
+}
+  .variablesDest{
+    margin-left: -90px;
+    font-size: 14px;
+  }
 
-  .subtitulo{
-     font-size: 60px;
-     text-align: center;
-     /* margin-left: 150px; */
-     width: 100%;
-   }
- }
- @media(width < 1080px) {
+  .botonEstado{
+    margin-left: -90px;
+    width: 250px;
+  }
 
-  .subtitulo{
-
-     text-align: center;
-     width: 110%;
-   }
- }
- @media(width < 963px) {
-
-  .subtitulo{
-     font-size: 50px;
-     text-align: center;
-     width: 112%;
-   }
- }
- @media(width < 749px) {
-
-  .subtitulo{
-
-     text-align: center;
-     width: 114%;
-   }
- }
- @media(width < 536px) {
-
-  .subtitulo{
-    font-size: 30px;
-
-     text-align: center;
-
-   }
- }
- @media(width < 441px) {
-
-  .subtitulo{
-    font-size: 30px;
-    width: 80%;
-     text-align: center;
-
-   }
- }
-
- @media(width < 940px) {
-
-  .carta-derecha{
-
-    border-radius: 10px;
-    right: -300px;
-    width: 400px;
-    margin-bottom: 20px;
-
-   }
- }
- @media(width < 721px) {
-
-  .carta-derecha{
-
-    border-radius: 10px;
-    right: -170px;
-    width: 400px;
-    margin-bottom: 20px;
-
-   }
- }
- @media(width < 721px) {
-
-  .carta-pequeña{
-
-    border-radius: 10px;
-    left: 170px;
-    width: 400px;
-    margin-bottom: 20px;
-
-   }
- }
- @media(width < 632px) {
-
-  .carta-derecha{
-
-    border-radius: 10px;
-    right: -100px;
-    width: 400px;
-    margin-bottom: 20px;
-
-   }
- }
-
+}
+//910
