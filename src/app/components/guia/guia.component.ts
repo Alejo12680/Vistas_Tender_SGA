@@ -19,7 +19,6 @@ export class GuiaComponent {
   nombreRemitente: string = "COLOMBIA TELECOMUNICACIONES S.A ESP";
   consultas: string[] = [];
   mostrarCirculo: boolean[] = [false, false, false, false, false, false];
-
   cantidad: number = 9;
   origen = "Bogotá DC";
   destino = "Bogotá DC";
@@ -140,7 +139,7 @@ export class GuiaComponent {
   ngOnInit() {
 
     // Mi servicio BehaviorSubject
-    this.miServicio.valorConsulta$.subscribe(valor => {
+    this.miServicio.valorConsulta$.subscribe((valor: any) => {
       // El Split nos ayuda que el string que llega de la consulta se separe y se convierta en un array de string
       this.consultas = valor.split('');
       console.log(this.consultas);

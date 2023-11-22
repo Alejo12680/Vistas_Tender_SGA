@@ -20,7 +20,7 @@
           ............................
         </p>
       </div>
-      <div class="col-9 expandirTamanio" >
+      <div class="col-12 col-md-9 expandirTamanio" >
         <ul class="float-sm-left fechasIconos" *ngFor="let step of steps; let i = index" (mouseover)="actualizarProgreso(step.id)">
           <li>{{ step.date }}</li>
           <li style="text-align: center;">{{ step.time }}</li>
@@ -32,7 +32,7 @@
     </div>
 
 
-    
+
       <div class="row">
 
         <div class="col-3">
